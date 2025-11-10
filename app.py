@@ -69,6 +69,7 @@ if __name__ == "__main__":
     addStudent("Abraham", "Lin", "abrahamlin@cmail.carleton.ca", "2022-01-01")
     getAllStudents()
     updateStudentEmail(1, "abrahamlin@gmail.com")
+    getAllStudents()
     deleteStudent(1)
     getAllStudents()
 
