@@ -13,7 +13,7 @@ DB_CONFIG = {
 def get_connection():
     return psycopg2.connect(**DB_CONFIG)
 
-
+# prints current table
 def getAllStudents():
     conn = get_connection()
     cur = conn.cursor()
@@ -25,7 +25,7 @@ def getAllStudents():
     cur.close()
     conn.close()
 
-
+# adds a student
 def addStudent(first_name, last_name, email, enrollment_date):
     conn = get_connection()
     cur = conn.cursor()
@@ -38,7 +38,7 @@ def addStudent(first_name, last_name, email, enrollment_date):
     cur.close()
     conn.close()
 
-
+# changes a student's email by their ID
 def updateStudentEmail(student_id, new_email):
     conn = get_connection()
     cur = conn.cursor()
@@ -52,7 +52,7 @@ def updateStudentEmail(student_id, new_email):
     cur.close()
     conn.close()
 
-
+# deletes a student by their ID
 def deleteStudent(student_id):
     conn = get_connection()
     cur = conn.cursor()
